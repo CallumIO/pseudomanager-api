@@ -7,7 +7,8 @@ pub async fn handle_request(payload: web::Json<serde_json::Value>)) -> impl Resp
     // payload is the JSON body object
 
     // Response
-    // HttpResponse::Ok().json(Pseudonym {})
+    // HttpResponse::Ok().json(Pseudonym {});
+    HttpResponse::Ok();
 }
 
 // object to be sent to the client
