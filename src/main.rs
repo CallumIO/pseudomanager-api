@@ -3,6 +3,7 @@ extern crate actix_web;
 use actix_web::{App, HttpServer, web};
 
 // modules
+mod handler;
 
 #[actix_rt::main]
 async fn main() -> std::io::Result<()> {
