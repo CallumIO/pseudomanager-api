@@ -10,10 +10,10 @@ async fn main() -> std::io::Result<()> {
         App::new()
             .service(
                 web::scope("/api")
+                    .service()
                     // add service handler here .service(module::function)
             )
     })
-    .workers(10)
     .keep_alive(15)
     .bind("127.0.0.1:8088")?
     .run()
