@@ -9,3 +9,16 @@ pub async fn handle_request(payload: web::Json<serde_json::Value>)) -> impl Resp
     // Response
     // HttpResponse::Ok().json(Pseudonym {})
 }
+
+// object to be sent to the client
+// TODO: Add correct properties
+
+#[derive(Serialize)]
+pub struct Pseudonym {
+    firstname: String,
+    lastname: String,
+    middlename: String,
+    age: u8,
+    birthdate: String,
+    address: Address,
+}
